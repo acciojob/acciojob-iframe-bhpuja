@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccioJob Iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            width: 800px;
+            height: 600px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+
     <h2>AccioJob Iframe</h2>
-    <iframe src="https://acciojob.com/" width="800" height="600" style="border: none;"></iframe>
+    <iframe id="accioIframe" src="https://acciojob.com/"></iframe>
+    <br>
+    <button onclick="reloadIframe()">Reload Iframe</button>
+
+    <script>
+        function reloadIframe() {
+            document.getElementById('accioIframe').src = "https://acciojob.com/";
+        }
+    </script>
+
 </body>
 </html>
+
